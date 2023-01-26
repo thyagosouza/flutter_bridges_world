@@ -1,5 +1,8 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
+
 import 'package:flutter_bridges__world/core/app_colors.dart';
+import 'package:flutter_bridges__world/models/atraction_model.dart';
 
 void main() {
   runApp(const MyApp());
@@ -73,6 +76,7 @@ class LandingPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             HeaderWidget(),
+            AttractionListView(),
           ],
         ),
       ),
@@ -124,6 +128,74 @@ class HeaderWidget extends StatelessWidget {
                 Text(
                   'Search',
                   style: TextStyle(color: AppColors.gray),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class AttractionListView extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Expanded(
+        child: ListView.builder(
+            padding: EdgeInsets.only(left: 10),
+            itemCount: attractions.length,
+            scrollDirection: Axis.horizontal,
+            itemBuilder: (context, index) {
+              AttractionModel currentAttraction = attractions[index];
+              return AttractionCard(attractionModel: currentAttraction);
+            }));
+  }
+}
+
+class AttractionCard extends StatelessWidget {
+  AttractionModel? attractionModel;
+  AttractionCard({this.attractionModel});
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 180,
+      margin: EdgeInsets.all(10),
+      child: Stack(
+        children: [
+          ClipRRect(
+            borderRadius: BorderRadius.circular(20),
+            child: Container(
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                    image: NetworkImage(attractionModel!.imgPath!),
+                    fit: BoxFit.cover),
+              ),
+            ),
+          ),
+          Container(
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                  colors: [Colors.transparent, Colors.black.withOpacity(0.5)],
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(30),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Text(attractionModel!.name!,
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold)),
+                SizedBox(height: 10),
+                Text(
+                  attractionModel!.location!,
+                  style: TextStyle(color: AppColors.mainYellow),
                 ),
               ],
             ),
