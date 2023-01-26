@@ -69,6 +69,66 @@ class LandingPage extends StatelessWidget {
             end: Alignment.bottomCenter,
           ),
         ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            HeaderWidget(),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+//? ---------- WIDGETS
+
+class HeaderWidget extends StatelessWidget {
+  const HeaderWidget({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(top: 30, left: 30, right: 30),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            'Where do you',
+            style: TextStyle(
+                color: Colors.white, fontSize: 30, fontWeight: FontWeight.bold),
+          ),
+          Text(
+            'want to go?',
+            style: TextStyle(
+                color: AppColors.mainYellow,
+                fontSize: 30,
+                fontWeight: FontWeight.bold),
+          ),
+          Container(
+            padding: EdgeInsets.all(15),
+            margin: EdgeInsets.symmetric(vertical: 20),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(50),
+              color: AppColors.lightGray,
+            ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Icon(
+                  Icons.search,
+                  color: AppColors.gray,
+                ),
+                SizedBox(
+                  width: 10,
+                ),
+                Text(
+                  'Search',
+                  style: TextStyle(color: AppColors.gray),
+                ),
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }
