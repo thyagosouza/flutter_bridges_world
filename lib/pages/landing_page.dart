@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../core/app_colors.dart';
-import '../widgets/attraction_card_widget.dart';
+import '../widgets/attraction_list_widget.dart';
 import '../widgets/bottom_bar_widget.dart';
 import '../widgets/header_widget.dart';
 
