@@ -10,4 +10,6 @@ A simple 3-page Flutter Application / Bridges of the World (Landing Page / Bonus
 - Creating Dart models to mock up app data
 - Import network images
 - Using Material Icon fonts
+- Basic Navigation strategies
+
 
