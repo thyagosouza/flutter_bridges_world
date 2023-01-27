@@ -1,16 +1,13 @@
-# flutter_bridges__world
+# UI Design - Bridges of the World
 
-A new Flutter project.
+A simple 3-page Flutter Application / Bridges of the World (Landing Page / Bonus labs: Splash Screen and Details Page)
+![1fc0accd265d087a](https://user-images.githubusercontent.com/54247489/215004768-76a6e19a-ee41-49a1-904a-21f3d2cc66c1.png)
+## Overview
 
-## Getting Started
+- Create Flutter User interfaces with ease
+- Common Flutter Layout strategies using just core widgets
+- Creating custom Flutter widgets and achieve widget composition
+- Creating Dart models to mock up app data
+- Import network images
+- Using Material Icon fonts
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
