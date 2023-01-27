@@ -21,8 +21,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      //home: LandingPage(),
-      home: SplashPage(),
+      home: LandingPage(),
+      //home: SplashPage(),
       //home: DetailsPage(selectedModel: attractions[0]),
     );
   }
